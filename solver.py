@@ -9,8 +9,10 @@ local = True
 local_process = './path_to_file'                    # Change path to local binary here.
 e = ELF(local_process)
 
-r_host = 'challenge_server.example'   # Change remote host here
+r_host = 'offsec-chalbroker.osiris.cyber.nyu.edu'   # Change remote host here
 r_port = xxxx                                       # Change remote port here
+
+nyu_netID = b'abc123'                               # Change NYU NetID here
 
 if local:
     if debug:
@@ -23,6 +25,7 @@ if local:
         p = process(local_process)
 else:
     p = remote( r_host, r_port)
+    p.sendlineafter(b'abc123): ', nyu_netID)
 
 # Add pwntools code below
 
