@@ -9,7 +9,7 @@ local = True
 local_process = './path_to_file'                    # Change path to local binary here.
 e = ELF(local_process)
 
-r_host = 'challenge_server.example'   # Change remote host here
+r_host = 'challenge_server.example'                 # Change remote host here
 r_port = xxxx                                       # Change remote port here
 
 if local:
